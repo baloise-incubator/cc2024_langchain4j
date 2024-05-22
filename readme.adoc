@@ -10,3 +10,4 @@
      - load files/text into the model ("I like football", ...)
      - and ask questions "which sport do you like" -> "football"
      https://github.com/langchain4j/langchain4j-examples/tree/main/other-examples/src/main/java
+- watched very good presentation on an RAG use case: https://youtu.be/J-3n7xs98Kc?si=xiSmOOrVC3IcbxEP
