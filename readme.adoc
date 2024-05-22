@@ -2,3 +2,11 @@
 
 == Initial Plan
 
+=== ToDo
+
+=== Done
+- explored examples from langchain4j website
+  -> found that the simple examples which
+     - load files/text into the model ("I like football", ...)
+     - and ask questions "which sport do you like" -> "football"
+     https://github.com/langchain4j/langchain4j-examples/tree/main/other-examples/src/main/java
