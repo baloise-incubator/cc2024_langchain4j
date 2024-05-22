@@ -3,6 +3,12 @@
 == Initial Plan
 
 === ToDo
+- Questions about code (preferrably our company repositories) can be answered
+  - similar to co-pilot
+  - more specific to our company
+  - eg 'how to search for a partner?', how to use the partner service, ...
+- ci/cd pipeline for such an application -- how can we offer the service sustainably
+- learning, learning
 
 === Done
 - explored examples from langchain4j website
