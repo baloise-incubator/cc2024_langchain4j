@@ -20,4 +20,16 @@
 ** and ask questions "which sport do you like" -> "football"
 
 * watched very good presentation on an RAG use case: https://youtu.be/J-3n7xs98Kc?si=xiSmOOrVC3IcbxEP
+** 25:05: interface EmbeddingModel: AllMiniLmL6V2EmbeddingModel vs. OpenAIModel
+** 25:56: EmbeddingStore
+** 27:50: Retriever
+** 28:15: content ingestion explained
+** 28:37:  workaround CommandlineRunner
+** 29:45:  load document
+** 32:35:  "this is RAG", he used it to build the vaadin docs assistant
+** 34:30:  tools
+** github
+*** https://github.com/marcushellberg/java-ai-playground
+*** https://github.com/marcushellberg/java-chat-with-documents
+
 * see also 3blue1brown series: https://www.youtube.com/watch?v=wjZofJX0v4M&t=2s
