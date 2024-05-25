@@ -28,7 +28,7 @@
 ** 29:45:  load document
 ** 32:35:  "this is RAG", he used it to build the vaadin docs assistant
 ** 34:30:  tools
-** github
+** github:
 *** https://github.com/marcushellberg/java-ai-playground
 *** https://github.com/marcushellberg/java-chat-with-documents
 
