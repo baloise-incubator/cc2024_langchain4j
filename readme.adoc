@@ -12,6 +12,7 @@
 * ci/cd pipeline for such an application
 * how can we offer the service sustainably
 * learning, learning
+* TDD such an app
 
 === Done
 * explored the https://github.com/langchain4j/langchain4j-examples/tree/main/other-examples/src/main/java[langchain4j example repository]
