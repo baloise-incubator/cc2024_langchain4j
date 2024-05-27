@@ -15,6 +15,7 @@
 * TDD such an app
 
 === Done
+* Checked out Ollama https://docs.langchain4j.dev/integrations/language-models/ollama
 * explored the https://github.com/langchain4j/langchain4j-examples/tree/main/other-examples/src/main/java[langchain4j example repository]
 * found the https://github.com/langchain4j/langchain4j-examples/blob/main/other-examples/src/main/java/embedding/store/InMemoryEmbeddingStoreExample.java[InMemoryEmbeddingStoreExample] which
 ** load files/text into the model ("I like football", ...)
