@@ -34,3 +34,5 @@
 *** https://github.com/marcushellberg/java-chat-with-documents
 
 * see also 3blue1brown series: https://www.youtube.com/watch?v=wjZofJX0v4M&t=2s
+
+* RAG for code: https://cloud.google.com/blog/products/ai-machine-learning/context-aware-code-generation-rag-and-vertex-ai-codey-apis?hl=en
