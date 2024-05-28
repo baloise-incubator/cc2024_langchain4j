@@ -13,6 +13,8 @@
 * how can we offer the service sustainably
 * learning, learning
 * TDD such an app
+* ollama stuff
+** try intellij integration (replacement for github co-pilot)
 
 === Done
 * explored the https://github.com/langchain4j/langchain4j-examples/tree/main/other-examples/src/main/java[langchain4j example repository]
