@@ -15,6 +15,7 @@
 * TDD such an app
 * ollama stuff
 ** try intellij integration (replacement for github co-pilot)
+** try create embeddings from a code base, eg https://www.youtube.com/watch?v=aD-u0gl93wM
 
 === Done
 * explored the https://github.com/langchain4j/langchain4j-examples/tree/main/other-examples/src/main/java[langchain4j example repository]
