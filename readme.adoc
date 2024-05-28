@@ -14,10 +14,11 @@
 * learning, learning
 * TDD such an app
 * ollama stuff
-** try intellij integration (replacement for github co-pilot)
 ** try create embeddings from a code base, eg https://www.youtube.com/watch?v=aD-u0gl93wM
 
 === Done
+* ollama stuff
+** try vscode integration (replacement for github copilot): https://github.com/bernardo-bruning/ollama-copilot?tab=readme-ov-file
 * explored the https://github.com/langchain4j/langchain4j-examples/tree/main/other-examples/src/main/java[langchain4j example repository]
 * found the https://github.com/langchain4j/langchain4j-examples/blob/main/other-examples/src/main/java/embedding/store/InMemoryEmbeddingStoreExample.java[InMemoryEmbeddingStoreExample] which
 ** load files/text into the model ("I like football", ...)
