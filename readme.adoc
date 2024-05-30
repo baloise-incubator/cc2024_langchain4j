@@ -111,6 +111,7 @@ Question:
 how can I publish an article on twitter?
 
 Answer:
+
 ````
 In order to publish an article on Twitter using the provided code, follow these steps:
 
@@ -128,12 +129,12 @@ Note: The actual implementation for tweeting via Twitter's API should be in the 
 
 Here is an example:
 
-```java
+java
 Article article = new Article("AuthorName", "ArticleTitle");
 TwitterClient twitterClient = new TwitterClient();
 TwitterArticlePublisher twitterPublisher = new TwitterArticlePublisher(twitterClient);
 twitterPublisher.publish(article);
-```
+
 
 This will create a tweet with the following format: "Check out the new article >>ArticleTitle<< by AuthorName".
 done
