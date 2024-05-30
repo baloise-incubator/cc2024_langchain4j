@@ -70,7 +70,7 @@ we used OpenAI
 
 === Some findings
 
-Corelia codebase, openai embeddings
+==== Corelia codebase, openai embeddings
 Q: "what's the max length of a street?"
 
 gpt-4 answer: "The maximum length of a street is defined by the constant STREET_MAX_SIZE, which is 35"
@@ -100,6 +100,44 @@ public enum LegalForm {
 ```
 
 llama3 answer: Based on the information you provided, it seems that there is no specific max length mentioned for a street in the code. However, in the `SizeConstraint` class, there is a constant named `STREET_MAX_SIZE` which has a value of 35. This suggests that the maximum length of a street in this context is 35 characters.
+
+Conclusion: the main purpose of codellama is is for code completion
+
+==== Hexagona architecture codebase
+
+repo: https://github.com/dziadeusz/hexagonal-architecture-by-example
+
+Question:
+how can I publish an article on twitter?
+
+Answer:
+````
+In order to publish an article on Twitter using the provided code, follow these steps:
+
+1. Create an instance of your Article object that you want to publish. This requires the article's author and title.
+
+2. Create an instance of the TwitterArticlePublisher class. This class requires an instance of the TwitterClient class.
+
+3. Call the publish method of the TwitterArticlePublisher instance, passing your Article object as an argument.
+
+4. The publish method will create a new ArticleTwitterModel object using the static of method, which formats the tweet with the article's title and the author's Twitter ID.
+
+5. The publish method will then call the tweet method of the TwitterClient instance, passing the ArticleTwitterModel object as an argument.
+
+Note: The actual implementation for tweeting via Twitter's API should be in the tweet method of the TwitterClient. This implementation is not provided in the code.
+
+Here is an example:
+
+```java
+Article article = new Article("AuthorName", "ArticleTitle");
+TwitterClient twitterClient = new TwitterClient();
+TwitterArticlePublisher twitterPublisher = new TwitterArticlePublisher(twitterClient);
+twitterPublisher.publish(article);
+```
+
+This will create a tweet with the following format: "Check out the new article >>ArticleTitle<< by AuthorName".
+done
+````
 
 === Links
 
