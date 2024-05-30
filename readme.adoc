@@ -74,6 +74,7 @@ Corelia codebase, openai embeddings
 Q: "what's the max length of a street?"
 
 gpt-4 answer: "The maximum length of a street is defined by the constant STREET_MAX_SIZE, which is 35"
+
 codellama:code answer: 
 ```
   @Size(max = COMPANY_NAME_MAX_SIZE)
@@ -82,6 +83,7 @@ codellama:code answer:
 
 ... much more gibberish
 ```
+
 codellama answer: 
 ```
 package ch.baloise.corellia.api.entities;
@@ -96,6 +98,7 @@ public enum LegalForm {
   EINZELUNTERNEHMEN("10"),
 ...
 ```
+
 llama3 answer: Based on the information you provided, it seems that there is no specific max length mentioned for a street in the code. However, in the `SizeConstraint` class, there is a constant named `STREET_MAX_SIZE` which has a value of 35. This suggests that the maximum length of a street in this context is 35 characters.
 
 === Links
