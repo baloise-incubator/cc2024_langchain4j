@@ -5,7 +5,9 @@ import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
+import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
+import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import dev.langchain4j.rag.content.retriever.EmbeddingStoreContentRetriever;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.TokenStream;
@@ -32,9 +34,13 @@ public class ChromaOllamaOpenAiRAGExample {
 
         StreamingChatLanguageModel model = OllamaStreamingChatModel.builder()
                 .baseUrl("http://localhost:11434")
-                .modelName("codellama:code")
+                .modelName("llama3")
                 .temperature(1.0)
                 .build();
+//        StreamingChatLanguageModel model = OpenAiStreamingChatModel.builder()
+//                .apiKey(dotenv.get("OPENAI_API_KEY"))
+//                .modelName("gpt-4")
+//                .build();
 
         EmbeddingStoreContentRetriever contentRetriever = EmbeddingStoreContentRetriever.builder()
                 .embeddingStore(embeddingStore)
@@ -48,9 +54,9 @@ public class ChromaOllamaOpenAiRAGExample {
                 .contentRetriever(contentRetriever)
                 .build();
 
-        TokenStream tokenStream = assistant.chat("What is an Agent?");
+        TokenStream tokenStream = assistant.chat("what's the max length of a street?");
         tokenStream.onNext(System.out::print)
-                .onComplete(System.out::println)
+                .onComplete(a -> System.out.println("\ndone"))
                 .onError(Throwable::printStackTrace)
                 .start();
     }
