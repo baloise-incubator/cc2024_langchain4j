@@ -39,3 +39,5 @@ build/
 
 ### Custom ###
 0_embedding.store
+
+.env
