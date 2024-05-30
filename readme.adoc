@@ -7,6 +7,14 @@
 ** more specific to our company
 ** eg 'how to search for a partner?', how to use the partner service, ...
 
+=== Monday
+
+=== Tuesday
+
+=== Wednesday
+
+
+
 === ToDo
 
 * ci/cd pipeline for such an application
