@@ -42,6 +42,7 @@ we used OpenAI
 * how can we offer the service sustainably
 * learning, learning
 * TDD such an app
+* check out sourcegraph.com
 
 === Done
 * Checked out Ollama https://docs.langchain4j.dev/integrations/language-models/ollama
