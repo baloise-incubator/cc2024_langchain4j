@@ -103,7 +103,7 @@ llama3 answer: Based on the information you provided, it seems that there is no 
 
 Conclusion: the main purpose of codellama is is for code completion
 
-==== Hexagona architecture codebase
+==== Hexagonal architecture codebase with openAI
 
 repo: https://github.com/dziadeusz/hexagonal-architecture-by-example
 
@@ -139,6 +139,56 @@ twitterPublisher.publish(article);
 This will create a tweet with the following format: "Check out the new article >>ArticleTitle<< by AuthorName".
 done
 ````
+
+==== Hexagonal architecture codebase, local
+
+embeddedModel: chromadb: all-MiniLM-L6-v2
+LLM-Model: ollama: codegemma
+
+Question:
+how can I publish an article on twitter?
+
+Answer:
+[quote]
+____
+**Step 1: Configure the TwitterClient**
+
+* Implement the `tweet()` method to interact with the Twitter API.
+* Ensure that you have the necessary credentials and API keys for Twitter integration.
+
+**Step 2: Create a TwitterArticlePublisher**
+
+* Inject the `TwitterClient` instance into the constructor.
+* Implement the `publish()` method to create an `ArticleTwitterModel` object and call the `tweet()` method of the `TwitterClient`.
+
+**Step 3: Use the ArticlePublisher**
+
+* In your article creation logic, create an `ArticleBuilder` with the necessary information and call the `build()` method.
+* Inject the `ArticlePublisher` and call the `publishCreationOf()` method to publish the article on Twitter.
+
+**Code Example:**
+
+```java
+// In your ArticlePublisher class
+private final TwitterArticlePublisher twitterArticlePublisher;
+
+public ArticlePublisher(TwitterArticlePublisher twitterArticlePublisher) {
+    this.twitterArticlePublisher = twitterArticlePublisher;
+}
+
+public void publishCreationOf(Article article) {
+    super.publishCreationOf(article);
+    twitterArticlePublisher.publish(article);
+}
+```
+
+**Additional Notes:**
+
+* Ensure that the Twitter account associated with the application has access to the necessary permissions for posting tweets.
+* Test the Twitter integration thoroughly before deploying it in production.
+* Consider using a social media management platform or API client library for easier integration.
+done
+____
 
 === Links
 
