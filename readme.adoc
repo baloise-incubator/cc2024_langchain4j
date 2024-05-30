@@ -8,6 +8,12 @@
 ** eg 'how to search for a partner?', how to use the partner service, ...
 
 === Monday
+* LangChain4J learnings
+** RAG (Retrieval Augmented Generation) Process
+** Step 1: ("setup time") create embedded Model of own documents (e.g. Java files)
+** Step 2: ("runtime") ask send question tor embeddings. -> 1-n results
+** Step 3: ("runtime") send result(s) and question to LLM
+
 
 === Tuesday
 
