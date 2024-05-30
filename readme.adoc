@@ -24,10 +24,15 @@ we used OpenAI
 ** used ollama-ui as a chat-gui (very similar to chatGPT UI) against ollama server
 * Inspect copilot protocol (which requests are sent from VS-Code to github) using an nginx proxy with logging
 * Redirect copilot requests to local ollama server via ollama-copilat (go program)
-*
 
 
 === Wednesday
+* Tried to create embeddings for local Java files -> results not very promising
+** -> we need a language (Java) specific splitter. Not available in langchain4J but in langchain-ai (Python)
+
+=== Thursday
+* langchain-ai with openai (pay)
+** index Java codebase -> works much better
 
 
 
