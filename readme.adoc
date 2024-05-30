@@ -14,8 +14,18 @@
 ** Step 2: ("runtime") ask send question tor embeddings. -> 1-n results
 ** Step 3: ("runtime") send result(s) and question to LLM
 
+we used OpenAI
+
 
 === Tuesday
+
+* Ollama (local LLM instead of OpenAI)
+** ollama in local docker container (with LLMs: 'codegemmaa', codellama'), and natively on Mac
+** used ollama-ui as a chat-gui (very similar to chatGPT UI) against ollama server
+* Inspect copilot protocol (which requests are sent from VS-Code to github) using an nginx proxy with logging
+* Redirect copilot requests to local ollama server via ollama-copilat (go program)
+*
+
 
 === Wednesday
 
