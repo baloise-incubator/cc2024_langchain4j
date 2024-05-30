@@ -66,3 +66,9 @@ we used OpenAI
 * see also 3blue1brown series: https://www.youtube.com/watch?v=wjZofJX0v4M&t=2s
 
 * RAG for code: https://cloud.google.com/blog/products/ai-machine-learning/context-aware-code-generation-rag-and-vertex-ai-codey-apis?hl=en
+
+=== Links
+
+* https://www.youtube.com/watch?v=AAMJZTEH_h4&t=236s[Talk to Your Code | Github Repo | Learn How GitHub Co-Pilot & Others Transform Coding]
+* https://www.youtube.com/watch?v=aD-u0gl93wM&t=5s[CODE-LLAMA For Talking to Code Base and Documentation]
+
