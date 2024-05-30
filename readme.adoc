@@ -68,6 +68,36 @@ we used OpenAI
 
 * RAG for code: https://cloud.google.com/blog/products/ai-machine-learning/context-aware-code-generation-rag-and-vertex-ai-codey-apis?hl=en
 
+=== Some findings
+
+Corelia codebase, openai embeddings
+Q: "what's the max length of a street?"
+
+gpt-4 answer: "The maximum length of a street is defined by the constant STREET_MAX_SIZE, which is 35"
+codellama:code answer: 
+```
+  @Size(max = COMPANY_NAME_MAX_SIZE)
+  @JsonPropertyDescription("Name of the contact (first and last name). Required when partnerNr not set!")
+  private String contactName;
+
+... much more gibberish
+```
+codellama answer: 
+```
+package ch.baloise.corellia.api.entities;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonPropertyDescription;
+import com.fasterxml.jackson.annotation.JsonValue;
+
+public enum LegalForm {
+  PRIVATPERSON("01"),
+  EINZELUNTERNEHMEN("10"),
+...
+```
+llama3 answer: Based on the information you provided, it seems that there is no specific max length mentioned for a street in the code. However, in the `SizeConstraint` class, there is a constant named `STREET_MAX_SIZE` which has a value of 35. This suggests that the maximum length of a street in this context is 35 characters.
+
 === Links
 
 * https://www.youtube.com/watch?v=AAMJZTEH_h4&t=236s[Talk to Your Code | Github Repo | Learn How GitHub Co-Pilot & Others Transform Coding]
