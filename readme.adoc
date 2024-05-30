@@ -111,8 +111,8 @@ Question:
 how can I publish an article on twitter?
 
 Answer:
-
-````
+[quote]
+____
 In order to publish an article on Twitter using the provided code, follow these steps:
 
 1. Create an instance of your Article object that you want to publish. This requires the article's author and title.
@@ -138,7 +138,7 @@ twitterPublisher.publish(article);
 
 This will create a tweet with the following format: "Check out the new article >>ArticleTitle<< by AuthorName".
 done
-````
+____
 
 ==== Hexagonal architecture codebase, local
 
