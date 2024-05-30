@@ -40,22 +40,22 @@
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-open-ai</artifactId>
-      <version>0.30.0</version>
+      <version>${langchain4j}</version>
     </dependency>
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-ollama</artifactId>
-      <version>0.30.0</version>
+      <version>${langchain4j}</version>
     </dependency>
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-easy-rag</artifactId>
-      <version>0.30.0</version>
+      <version>${langchain4j}</version>
     </dependency>
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-chroma</artifactId>
-      <version>0.30.0</version>
+      <version>${langchain4j}</version>
     </dependency>
     <dependency>
       <groupId>io.github.cdimascio</groupId>
