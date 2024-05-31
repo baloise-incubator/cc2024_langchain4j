@@ -2,8 +2,8 @@
 
 ## Setup
 
-- `git clone git@github.com/Baloise-CodeCamp-2022/clojuregame-presentation.git`
-- `cd clojuregame-presentation`
+- `git clone https://github.com/baloise-incubator/cc2024_langchain4j.git
+- `cd 5_presention
 - `npm install`
  
 ### Build
