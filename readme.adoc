@@ -31,8 +31,11 @@ we used OpenAI
 ** -> we need a language (Java) specific splitter. Not available in langchain4J but in langchain-ai (Python)
 
 === Thursday
-* langchain-ai with openai (pay)
-** index Java codebase -> works much better
+* index Java codebase
+** langchain-ai with openai (pay) -> works quite fast, good results
+** running locally:
+*** generate embeddings with python -> chromadb
+*** query with Java (langchain4j) using embeddings from chromadb against ollama-LLM -> works, but slow, results OK, GPU improves performance a lot
 
 
 
