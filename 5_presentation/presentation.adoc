@@ -6,8 +6,6 @@ LLM for engineering questions using langchain4j
 
 == Vision
 
-=== Sub
-
 [%step]
 * Questions about code (preferrably our company repositories) can be answered
 * similar to copilot
@@ -35,8 +33,6 @@ Retrieval
 image::https://docs.langchain4j.dev/assets/images/rag-retrieval-f525d2937abc08fed5cec36a7f08a4c3.png[RAG 2]
 
 [%step]
-
-* TBD
 
 === Tuesday
 
@@ -68,5 +64,9 @@ index Java codebase
 
 === Friday
 
+video::hexa-openai-720.mov[]
 
-
+[source,small]
+---
+Code from https://github.com/dziadeusz/hexagonal-architecture-by-example.git 
+---
