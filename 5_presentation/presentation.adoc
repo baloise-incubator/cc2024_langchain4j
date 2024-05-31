@@ -1,0 +1,72 @@
+= Codecamp 2024: Talk to your Code
+
+LLM for engineering questions using langchain4j
+
+//:title-slide-background-color: #ff0000
+
+== Vision
+
+=== Sub
+
+[%step]
+* Questions about code (preferrably our company repositories) can be answered
+* similar to copilot
+* more specific to our company
+* eg 'how to search for a partner?', how to use the partner service, …​
+
+== Our Journey
+
+=== Monday
+
+LangChain4J learnings
+
+RAG: Retrieval Augmented Generation
+
+=== !
+
+Indexing
+
+image::https://docs.langchain4j.dev/assets/images/rag-ingestion-9b548e907df1c3c8948643795a981b95.png[RAG 1]
+
+=== !
+
+Retrieval
+
+image::https://docs.langchain4j.dev/assets/images/rag-retrieval-f525d2937abc08fed5cec36a7f08a4c3.png[RAG 2]
+
+[%step]
+
+* TBD
+
+=== Tuesday
+
+[%step]
+* Ollama (local LLM instead of OpenAI)
+** ollama in local docker container (with LLMs: 'codegemmaa', codellama'), and natively on Mac
+** used ollama-ui as a chat-gui (very similar to chatGPT UI) against ollama server
+* Inspect copilot protocol (which requests are sent from VS-Code to github) using an nginx proxy with logging
+* Redirect copilot requests to local ollama server via ollama-copilat (go program)
+
+
+=== Wednesday
+
+[%step]
+* Tried to create embeddings for local Java files -> results not very promising
+** -> we need a language (Java) specific splitter. Not available in langchain4J but in langchain-ai (Python)
+
+=== Thursday
+
+index Java codebase
+
+[%step]
+* langchain-ai with openai (pay) -> works quite fast, good results
+* running locally, using all-MiniLM-L6-v2:
+** generate embeddings with python -> chromadb
+** query with Java (langchain4j) using embeddings from chromadb against ollama-LLM -> works, but slow, results OK, GPU improves performance a lot
+
+
+
+=== Friday
+
+
+
