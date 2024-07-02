@@ -1,5 +1,10 @@
 package org.example.playlangchain4j.otherexamples.embedding.store;
 
+import java.time.Duration;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.embedding.AllMiniLmL6V2EmbeddingModel;
@@ -7,15 +12,8 @@ import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.store.embedding.EmbeddingMatch;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.chroma.ChromaEmbeddingStore;
-import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
-import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
-import java.util.List;
-
-/**
- * from: https://github.com/langchain4j/langchain4j-examples/blob/main/other-examples/src/main/java/embedding/store/InMemoryEmbeddingStoreExample.java
- */
+// run https://www.trychroma.com/  i.e. via `docker run -p 8000:8000 chromadb/chroma`
 class ChromaEmbeddingStoreExampleTest {
 	@Test
 	void t1() {
