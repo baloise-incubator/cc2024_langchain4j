@@ -7,9 +7,9 @@ import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.embedding.AllMiniLmL6V2EmbeddingModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.store.embedding.EmbeddingMatch;
+import dev.langchain4j.store.embedding.EmbeddingSearchRequest;
+import dev.langchain4j.store.embedding.EmbeddingSearchResult;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
-
-import java.util.List;
 
 /**
  * from: https://github.com/langchain4j/langchain4j-examples/blob/main/other-examples/src/main/java/embedding/store/InMemoryEmbeddingStoreExample.java
@@ -27,8 +27,14 @@ class InMemoryEmbeddingStoreExampleTest {
 //		embed("Cats are furry.", embeddingModel, embeddingStore);
 
 		Embedding queryEmbedding = embeddingModel.embed("I do like baseball").content();
-		List<EmbeddingMatch<TextSegment>> relevant = embeddingStore.findRelevant(queryEmbedding, 1);
-		EmbeddingMatch<TextSegment> embeddingMatch = relevant.get(0);
+		EmbeddingSearchResult<TextSegment> relevant = embeddingStore.search(
+				EmbeddingSearchRequest.builder()
+					.queryEmbedding(queryEmbedding)
+					.maxResults(1)
+					.build()
+				);
+	
+		EmbeddingMatch<TextSegment> embeddingMatch = relevant.matches().get(0);
 
 		System.out.println(embeddingMatch.score()); // 0.8144288515898701
 		System.out.println(embeddingMatch.embedded().text()); // I like football.
