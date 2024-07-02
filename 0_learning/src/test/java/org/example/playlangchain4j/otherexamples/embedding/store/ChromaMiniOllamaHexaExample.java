@@ -1,20 +1,36 @@
 package org.example.playlangchain4j.otherexamples.embedding.store;
 
+import java.time.Duration;
+
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;
 import dev.langchain4j.model.embedding.AllMiniLmL6V2EmbeddingModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
-import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.rag.content.retriever.EmbeddingStoreContentRetriever;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.TokenStream;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.chroma.ChromaEmbeddingStore;
-import io.github.cdimascio.dotenv.Dotenv;
 
-import java.time.Duration;
+//see https://ollama.com/download/linux
+//
+//
+//curl -fsSL https://ollama.com/install.sh | sh
+//
+//see https://github.com/ollama/ollama/issues/729#issuecomment-1906311485
+//
+//sudi vi  /etc/systemd/system/ollama.service
+//
+//[Service]
+//Environment="https_proxy=http://<IP>:<PORT>"
+
+//sudo systemctl daemon-reload
+//sudo systemctl restart ollama.service
+//
+//ollama pull codegemma
+//ollama run codegemma
 
 public class ChromaMiniOllamaHexaExample {
 
@@ -24,7 +40,7 @@ public class ChromaMiniOllamaHexaExample {
     }
 
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.load();
+        //Dotenv dotenv = Dotenv.load();
 
         EmbeddingStore<TextSegment> embeddingStore = ChromaEmbeddingStore.builder()
                 .baseUrl("http://localhost:8000")
